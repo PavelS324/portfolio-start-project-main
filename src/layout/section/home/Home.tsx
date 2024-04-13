@@ -21,6 +21,7 @@ export const Home = () => {
 const StyledHome = styled.div`
     min-height: 70vh;
     background-color: #597a97;
+    color: #fff;
 `
 
 
