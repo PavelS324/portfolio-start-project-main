@@ -1,27 +1,28 @@
 import styled from "styled-components";
 import MyPhoto from "../../../assets/images/I.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
+import { Container } from "../../../components/Container";
 
 export const Home = () => {
     return (
         <StyledHome>
-            <FlexWrapper align={"center"} justify={"space-around"}>
-                <div>
-                    <span>Hi There</span>
-                    <HomeName>I am Pavel Sasim</HomeName>
-                    <HomeTitle>A Front-End Developer</HomeTitle>
-                </div>
+            <Container>
+                <FlexWrapper align={"center"} justify={"space-around"}>
+                    <div>
+                        <span>Hi There</span>
+                        <HomeName>I am Pavel Sasim</HomeName>
+                        <HomeTitle>A Front-End Developer</HomeTitle>
+                    </div>
 
-                <StyledPhoto src={MyPhoto} alt="" />
-            </FlexWrapper>
+                    <StyledPhoto src={MyPhoto} alt="" />
+                </FlexWrapper>
+            </Container>
         </StyledHome>
     );
 };
 
 const StyledHome = styled.div`
     min-height: 70vh;
-    background-color: #597a97;
-    color: #fff;
 `
 
 
