@@ -39,7 +39,7 @@ const Skill = (props: SkillpropsType) => {
     )
 }
 
-const StyledSkills = styled.div`
+const StyledSkills = styled.section`
     min-height: 50vh;
 `
 

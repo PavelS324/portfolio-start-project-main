@@ -55,7 +55,7 @@ const Project = (props: SkillpropsType) => {
     )
 }
 
-const StyledProjects = styled.div`
+const StyledProjects = styled.section`
     min-height: 70vh;
 `
 

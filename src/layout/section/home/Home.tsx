@@ -21,7 +21,7 @@ export const Home = () => {
     );
 };
 
-const StyledHome = styled.div`
+const StyledHome = styled.section`
     min-height: 70vh;
     display: flex;
 `
