@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 export const Menu = () => {
     return (
@@ -34,9 +35,10 @@ const StyleLi = styled.li`
 `
 
 const StyleLink = styled.a`
+    color: ${theme.colors.font};
     &:hover {
-        transition: 500ms;
-        color: red;
+        transition: 1500ms;
+        color: #f5c9c9;
     }
 `
 
