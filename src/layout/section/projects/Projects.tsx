@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { Icon } from "../../../components/icon/Icon";
 import projectLink from "../../../assets/images/projects/projectLink.webp";
 import projectGitHub from "../../../assets/images/projects/projectGitHub.webp";
 import project_01 from "../../../assets/images/projects/Project_01.webp";
 import project_02 from "../../../assets/images/projects/Project_02.webp";
 import { Container } from "../../../components/Container";
+import { SectionDescribe, SectionName } from "../../../components/SectionsText";
+import { theme } from "../../../styles/Theme";
 
 export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <ProjectsText>Projects</ProjectsText>
-                <ProjectsText>Things I’ve built so far</ProjectsText>
+                <SectionName>Projects</SectionName>
+                <SectionDescribe>Things I’ve built so far</SectionDescribe>
 
                 <FlexWrapper align={"start"} justify={"space-around"} wrap="wrap">
                     <Project nameProject="Project 1" 
@@ -38,19 +39,25 @@ const Project = (props: SkillpropsType) => {
     return (
         <ProjectBox>
             <ProjectImg src={props.imgSrc}/>
-            <ProjectName>{props.nameProject}</ProjectName>
-            <ProjectDescribe>{props.describeProject || ''}</ProjectDescribe>
-            <ProjectDescribe>{props.stackProject || ''}</ProjectDescribe>
-            <FlexWrapper justify="space-between">
-                <FlexWrapper align="center">
-                    <ProjectLincImg src={projectLink} alt=""/>
-                    <ProjectLinc>Live Preview</ProjectLinc>
-                </FlexWrapper>
-                <FlexWrapper align="center">
-                    <ProjectGitHubImg src={projectGitHub} alt=""/>
-                    <ProjectLinc>View Code</ProjectLinc>
-                </FlexWrapper>
-            </FlexWrapper>
+            <ProjectDescribeBox>
+                    <ProjectDescribeText>
+                        <ProjectName>{props.nameProject}</ProjectName>
+                        <ProjectDescribe>{props.describeProject || ''}</ProjectDescribe>
+                        <ProjectDescribeTeck>{props.stackProject || ''}</ProjectDescribeTeck>
+                    </ProjectDescribeText>
+                    <ProjectBottomsPosition>
+                        <FlexWrapper justify="space-around">
+                            <FlexWrapper align="flex-center">
+                                <ProjectLincImg src={projectLink} alt=""/>
+                                <ProjectLinc>Live Preview</ProjectLinc>
+                            </FlexWrapper>
+                            <FlexWrapper align="flex-center">
+                                <ProjectGitHubImg src={projectGitHub} alt=""/>
+                                <ProjectLinc>View Code</ProjectLinc>
+                            </FlexWrapper>
+                        </FlexWrapper>
+                    </ProjectBottomsPosition>
+            </ProjectDescribeBox>
         </ProjectBox>
     )
 }
@@ -59,13 +66,13 @@ const StyledProjects = styled.section`
     min-height: 70vh;
 `
 
-
-const ProjectsText = styled.h2`
-    text-align: center;
-`
-
 const ProjectBox = styled.div`
-    
+    display: inline-block;
+    position: relative;
+    min-height: 500px;
+    height: 100%;
+    background-color: #4b6983;// ${theme.colors.projectBg};
+    border-radius: 20px;
 `
 
 const ProjectImg = styled.img`
@@ -75,10 +82,40 @@ const ProjectImg = styled.img`
     border-radius: 20px 20px 0px 0px;
 `
 
+const ProjectDescribeBox = styled.div`
+    position: relative;
+    width: 100%;
+    height: 240px;
+    padding: 15px 25px;
+    //background-color: #752c2cb0;
+`
+
+const ProjectDescribeText = styled.div`
+`
+
+const ProjectBottomsPosition = styled.div`
+    display: block;
+    width: calc(100% - 50px);
+    position: absolute;
+    bottom: 10px;
+`
+
 const ProjectName = styled.h3`
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 26px;
 `
 
 const ProjectDescribe = styled.h3`
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+`
+
+const ProjectDescribeTeck = styled.h3`
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
 `
 
 const ProjectLincImg = styled.img`
@@ -94,6 +131,10 @@ const ProjectGitHubImg = styled.img`
 const ProjectLinc = styled.a`
     width: 96px;
     height: 26px;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
 `
 
 

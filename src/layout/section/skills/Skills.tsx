@@ -2,8 +2,7 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { Container } from "../../../components/Container";
-import { SectionName } from "../../../components/SectionsText";
-import { SectionDescribe } from "../../../components/SectionsText";
+import { SectionDescribe, SectionName } from "../../../components/SectionsText";
 
 export const Skills = () => {
     return (
