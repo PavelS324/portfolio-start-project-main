@@ -47,14 +47,18 @@ const Project = (props: SkillpropsType) => {
                     </ProjectDescribeText>
                     <ProjectBottomsPosition>
                         <FlexWrapper justify="space-around">
-                            <FlexWrapper align="flex-center">
-                                <ProjectLincImg src={projectLink} alt=""/>
-                                <ProjectLinc>Live Preview</ProjectLinc>
-                            </FlexWrapper>
-                            <FlexWrapper align="flex-center">
-                                <ProjectGitHubImg src={projectGitHub} alt=""/>
-                                <ProjectLinc>View Code</ProjectLinc>
-                            </FlexWrapper>
+                            <StyleProjektLinks>
+                                <FlexWrapper align="flex-center">
+                                    <ProjectLincImg src={projectLink} alt=""/>
+                                    <ProjectLinc>Live Preview</ProjectLinc>
+                                </FlexWrapper>
+                            </StyleProjektLinks>
+                            <StyleProjektLinks>
+                                <FlexWrapper align="flex-center">
+                                    <ProjectLincImg src={projectGitHub} alt=""/>
+                                    <ProjectLinc>View Code</ProjectLinc>
+                                </FlexWrapper>
+                            </StyleProjektLinks>
                         </FlexWrapper>
                     </ProjectBottomsPosition>
             </ProjectDescribeBox>
@@ -71,7 +75,7 @@ const ProjectBox = styled.div`
     position: relative;
     min-height: 500px;
     height: 100%;
-    background-color: #4b6983;// ${theme.colors.projectBg};
+    background-color: ${theme.colors.projectBg};
     border-radius: 20px;
 `
 
@@ -118,12 +122,15 @@ const ProjectDescribeTeck = styled.h3`
     line-height: 26px;
 `
 
-const ProjectLincImg = styled.img`
-    width: 20px;
-    height: 20px;
+const StyleProjektLinks = styled.div`
+    &:hover {
+        transform: scale(1.1);
+        transition: 500ms;
+    }
 `
 
-const ProjectGitHubImg = styled.img`
+
+const ProjectLincImg = styled.img`
     width: 20px;
     height: 20px;
 `

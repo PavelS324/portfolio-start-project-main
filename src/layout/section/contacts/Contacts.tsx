@@ -3,13 +3,14 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/Icon";
 import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
+import { SectionName } from "../../../components/SectionsText";
 
 export const Contacts = () => {
     return (
         <StyledContacts>
             <Container>
                 <FlexWrapper direction="column">
-                    <StyledContactsText>Contacts</StyledContactsText>
+                    <SectionName>Contacts</SectionName>
 
                     <ContactsCenter>
                         <StyledForm>
@@ -36,14 +37,14 @@ const StyledContacts = styled.section`
     min-height: 40vh;
 `
 
-const StyledContactsText = styled.h2`
-    text-align: center;
-`
-
 const ContactsCenter = styled.div`
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
+
+    div {
+        margin-bottom: 25px;
+    }
 `
 
 const StyledForm = styled.form`
@@ -53,16 +54,31 @@ const StyledForm = styled.form`
     flex-direction: column;
     gap: 10px;
 
-    margin: 0 auto;
+    margin: 0 auto 35px;
     padding: 0;
 `
 
 const StyledInput = styled.input`
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
 `
 
 const StyledButton = styled.button`
     border: 3px solid ${theme.colors.projectBg};
-    color: ${theme.colors.projectBg};
+    border-radius: 5px;
+    background-color: ${theme.colors.buttonsBGC};
+    color: ${theme.colors.font};
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+
+    &:hover {
+        font-size: 18px;
+        border-color: ${theme.colors.buttonsBGC};
+        transition: 500ms;
+    }
 `
 
 type StyledContactType = {
@@ -71,9 +87,15 @@ type StyledContactType = {
 
 const StyledContact = (props: StyledContactType) => {
     return (
-        <a><Icon iconId={props.iconId} height="30" wight="30"/></a>
+        <StyledMessengerLink><Icon iconId={props.iconId} height="30" wight="30"/></StyledMessengerLink>
     )
 }
 
+const StyledMessengerLink = styled.a`
+    &:hover {
+        transform: scale(1.2);
+        transition: 500ms;
+    }
+`
 
 
