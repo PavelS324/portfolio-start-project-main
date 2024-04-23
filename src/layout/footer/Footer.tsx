@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Logo} from '../../components/logo/Logo';
 import { Menu } from '../../components/menu/Menu';
 import { Container } from '../../components/Container';
 import { FlexWrapper } from '../../components/FlexWrapper';
@@ -8,7 +7,9 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <Menu/>
+                <FlexWrapper justify='center'>
+                    <Menu/>
+                </FlexWrapper>
             </Container>
         </StyledFooter>
     );
@@ -16,5 +17,8 @@ export const Footer = () => {
 
 
 const StyledFooter = styled.footer`
+    div {
+        padding: 5px;
+    }
 `
 
