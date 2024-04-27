@@ -56,12 +56,22 @@ const StyledForm = styled.form`
 
     margin: 0 auto 35px;
     padding: 0;
+    
+    textarea {
+        resize: none;
+        height: 100px;
+    }
 `
 
 const StyledInput = styled.input`
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 20px;
+
+    &:focus-visible {
+        outline: 3px solid ${theme.colors.buttonsBGC};
+    }
 `
 
 const StyledButton = styled.button`
@@ -70,6 +80,7 @@ const StyledButton = styled.button`
     background-color: ${theme.colors.buttonsBGC};
     color: ${theme.colors.font};
 
+    font-family: 'Poppins';
     font-weight: 300;
     font-size: 16px;
     line-height: 26px;
