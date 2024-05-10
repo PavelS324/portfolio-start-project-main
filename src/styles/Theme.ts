@@ -1,3 +1,4 @@
+import { table } from "console";
 
 export const theme = {
     colors: {
@@ -6,5 +7,10 @@ export const theme = {
         buttonsBGC: "#3a546b",
 
         font: "#fff"
+    },
+
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)"
     }
 }
