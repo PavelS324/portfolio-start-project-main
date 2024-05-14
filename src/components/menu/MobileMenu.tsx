@@ -5,11 +5,11 @@ import { theme } from "../../styles/Theme";
 export const MobileMenu = () => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span></span>
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
                 <ul>
                     <StyleLi><StyleLink href="">Home</StyleLink></StyleLi>
                     <StyleLi><StyleLink href="">About</StyleLink></StyleLi>
@@ -29,8 +29,6 @@ const StyledMobileMenu = styled.nav`
         display: block;
         width: 100px;
         height: 100px;
-
-//        border: 5px solid green;
     }
 `
 
@@ -38,16 +36,9 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     position: fixed;
     width: 100px;
     height: 100px;
-
-//    border: 5px solid red;
-//    background-color: #da1a1a;
     right: 15px;
 
     span {
-
-//        border: 20px solid blue;
-//        z-index: 9999999;
-
         display: block;
         width: 36px;
         height: 2px;
@@ -61,10 +52,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         `}
 
         &::before {
-
-//            border: 50px solid white;
-//            z-index: 9999999;
-
             content: "";
             display: block;
             width: 36px;
@@ -80,10 +67,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         }
 
         &::after {
-
-//            border: 50px solid yellow;
-//            z-index: 9999999;
-
             content: "";
             display: block;
             width: 24px;
