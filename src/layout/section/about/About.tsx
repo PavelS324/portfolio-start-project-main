@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
+import { theme } from "../../../styles/Theme";
 
 export const About = () => {
     return (
@@ -32,6 +33,29 @@ const StyledAbout = styled.section`
 
 const StyledDescription = styled.div`
     max-width: 50%;
+    padding: 20px 0;
+    position: relative;
+
+//    &::after {
+//        display: block;
+//        position: absolute;
+//        content: "";
+//        height: 100%;
+//        width: 100%;
+//        top: 0;//100px;
+//        //right: 0;//calc(40% - 10px);
+//        left: 100%;
+//
+//        border: 5px solid green;
+//
+//        @media ${theme.media.tablet} {
+//            max-width: 25%;
+//        }
+//    }
+
+    @media ${theme.media.tablet} {
+        max-width: 80%;
+    }
 `
 
 
@@ -39,12 +63,22 @@ const AboutName = styled.h2`
     font-weight: 700;
     font-size: 42px;
     line-height: 52px;
+
+    @media ${theme.media.tablet} {
+        font-size: 36px;
+        line-height: 44px;
+    }
 `
 
 const AboutParagraph = styled.p`
     font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 28px;
+
+    @media ${theme.media.tablet} {
+        font-size: 18px;
+        line-height: 24px;
+    }
 `
 
 const AboutUl = styled.ul`
@@ -54,6 +88,11 @@ const AboutLi = styled.li`
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
+
+    @media ${theme.media.tablet} {
+        font-size: 18px;
+        line-height: 24px;
+    }
 `
 
 
