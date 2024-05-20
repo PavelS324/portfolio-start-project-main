@@ -45,7 +45,8 @@ const StyledSkills = styled.section`
 `
 
 const StyledSkillBox = styled.div`
-    margin: 30px 5%;
+    margin: 30px 6%;
+    flex-grow: 1;
 `
 
 const SkillName = styled.h3`
