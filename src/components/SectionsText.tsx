@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { font } from "../styles/Common";
 
 export const SectionName = styled.h2`
-    ${font({weight: 700, Fmin: 40, Fmax: 48})}
+    ${font({weight: 700, lineHeight: "56px", Fmin: 40, Fmax: 48})}
 
     text-align: center;
 //    font-weight: 700;
 //    font-size: 48px;
-    line-height: 56px;
+//    line-height: 56px;
 
     margin: 0 0 25px;
 `

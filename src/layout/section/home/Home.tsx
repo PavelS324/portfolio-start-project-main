@@ -42,14 +42,14 @@ const HomeBoxText = styled.div`
 `
 
 const HomeHi = styled.span`
-    ${font({weight: 400, Fmax: 18, Fmin: 14})}
+    ${font({weight: 400, lineHeight: "21px", Fmax: 18, Fmin: 14})}
 //    font-weight: 400;
 //    font-size: 18px;
 //    line-height: 21px;
 `
 
 const HomeName = styled.h2`
-    ${font({weight: 700, Fmax: 50, Fmin: 36})}
+    ${font({weight: 700, lineHeight: "50px", Fmax: 50, Fmin: 36})}
 //    font-weight: 700;
 //    font-size: 50px;
 //    line-height: 50px;
@@ -66,7 +66,7 @@ const HomeName = styled.h2`
 `
 
 const HomeTitle = styled.h1`
-    ${font({weight: 400, Fmax: 27, Fmin: 20})}
+    ${font({weight: 400, lineHeight: "40.5px", Fmax: 27, Fmin: 20})}
 //    font-weight: 400;
 //    font-size: 27px;
 //    line-height: 40.5px;

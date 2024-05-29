@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const About = () => {
     return (
@@ -60,23 +61,25 @@ const StyledDescription = styled.div`
 
 
 const AboutName = styled.h2`
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 52px;
+    ${font({weight: 700, lineHeight: "52px", Fmax: 42, Fmin: 36})}
+//    font-weight: 700;
+//    font-size: 42px;
+//    line-height: 52px;
 
     @media ${theme.media.tablet} {
-        font-size: 36px;
+//        font-size: 36px;
         line-height: 44px;
     }
 `
 
 const AboutParagraph = styled.p`
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    ${font({weight: 400, lineHeight: "32px", Fmax: 20, Fmin: 18})}
+//    font-weight: 400;
+//    font-size: 20px;
+//    line-height: 28px;
 
     @media ${theme.media.tablet} {
-        font-size: 18px;
+//        font-size: 18px;
         line-height: 24px;
     }
 `
@@ -85,12 +88,13 @@ const AboutUl = styled.ul`
 `
 
 const AboutLi = styled.li`
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+    ${font({weight: 400, lineHeight: "32px", Fmax: 20, Fmin: 18})}
+//    font-weight: 400;
+//    font-size: 20px;
+//    line-height: 28px;
 
     @media ${theme.media.tablet} {
-        font-size: 18px;
+//        font-size: 18px;
         line-height: 24px;
     }
 `

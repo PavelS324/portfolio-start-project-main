@@ -18,7 +18,7 @@ export const Projects = () => {
                 <FlexWrapper align={"start"} justify={"space-around"} wrap="wrap">
                     <Project nameProject="Project 1" 
                             imgSrc={project_01} 
-                            describeProject="Project 1 describe text" 
+                            describeProject="Project 1 describe text describe text describe text describe text describe text describe text describe text describe text describe text describe text describe text describe text describe text" 
                             stackProject="Teck stack: HTML, CSS, React"/>
                     <Project nameProject="Project 2" 
                             imgSrc={project_02}/>
@@ -68,6 +68,10 @@ const Project = (props: SkillpropsType) => {
 
 const StyledProjects = styled.section`
     min-height: 70vh;
+
+    ${FlexWrapper} {
+        gap: 30px;
+    }
 `
 
 const ProjectBox = styled.div`
@@ -75,12 +79,16 @@ const ProjectBox = styled.div`
     position: relative;
     min-height: 500px;
     height: 100%;
+    max-width: 375px;
+    width: 339px;
+    flex-grow: 1;
     background-color: ${theme.colors.projectBg};
     border-radius: 20px;
+    margin: 7px;
 `
 
 const ProjectImg = styled.img`
-    width: 375px;
+    width: 100%;
     height: 260px;
     gap: 0px;
     border-radius: 20px 20px 0px 0px;
