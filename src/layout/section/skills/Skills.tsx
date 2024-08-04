@@ -6,7 +6,7 @@ import { SectionDescribe, SectionName } from "../../../components/SectionsText";
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <StyledSkills id={"skills"}>
             <Container>
                 <SectionName>My Tech Stack</SectionName>
                 <SectionDescribe>Technologies I’ve been working with recently</SectionDescribe>

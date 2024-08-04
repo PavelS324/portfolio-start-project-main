@@ -10,7 +10,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Projects = () => {
     return (
-        <StyledProjects>
+        <StyledProjects id={"projects"}>
             <Container>
                 <SectionName>Projects</SectionName>
                 <SectionDescribe>Things I’ve built so far</SectionDescribe>

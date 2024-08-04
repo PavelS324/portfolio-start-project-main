@@ -7,7 +7,7 @@ import { SectionName } from "../../../components/SectionsText";
 
 export const Contacts = () => {
     return (
-        <StyledContacts>
+        <StyledContacts id={"contacts"}>
             <Container>
                 <FlexWrapper direction="column">
                     <SectionName>Contacts</SectionName>

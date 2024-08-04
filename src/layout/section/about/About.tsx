@@ -5,7 +5,7 @@ import { font } from "../../../styles/Common";
 
 export const About = () => {
     return (
-        <StyledAbout>
+        <StyledAbout id={"about"}>
             <Container>
                 <StyledDescription>
                     <AboutName>About me</AboutName>

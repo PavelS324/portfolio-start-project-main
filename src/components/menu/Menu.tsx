@@ -5,11 +5,11 @@ export const Menu = () => {
     return (
         <StyledMenu>
             <ul>
-                <StyleLi><StyleLink href="">Home</StyleLink></StyleLi>
-                <StyleLi><StyleLink href="">About</StyleLink></StyleLi>
-                <StyleLi><StyleLink href="">Tech Stack</StyleLink></StyleLi>
-                <StyleLi><StyleLink href="">Projects</StyleLink></StyleLi>
-                <StyleLi><StyleLink href="">Contact</StyleLink></StyleLi>
+                <StyleLi><StyleLink href="#home">Home</StyleLink></StyleLi>
+                <StyleLi><StyleLink href="#about">About</StyleLink></StyleLi>
+                <StyleLi><StyleLink href="#skills">Tech Stack</StyleLink></StyleLi>
+                <StyleLi><StyleLink href="#projects">Projects</StyleLink></StyleLi>
+                <StyleLi><StyleLink href="#contacts">Contact</StyleLink></StyleLi>
             </ul>
         </StyledMenu>
     );
