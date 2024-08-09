@@ -9,6 +9,10 @@ export const theme = {
         font: "#fff"
     },
 
+    animations: {
+        transition: "500ms ease-in-out",
+    },
+
     media: {
         tablet: "screen and (max-width: 768px)",
         mobile: "screen and (max-width: 576px)"

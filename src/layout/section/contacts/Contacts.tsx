@@ -85,10 +85,12 @@ const StyledButton = styled.button`
     font-size: 16px;
     line-height: 26px;
 
+    transition: ${theme.animations.transition};
+
     &:hover {
         font-size: 18px;
         border-color: ${theme.colors.buttonsBGC};
-        transition: 500ms;
+    transition: 500ms;
     }
 `
 
@@ -103,9 +105,10 @@ const StyledContact = (props: StyledContactType) => {
 }
 
 const StyledMessengerLink = styled.a`
+    transition: ${theme.animations.transition};
+
     &:hover {
         transform: scale(1.2);
-        transition: 500ms;
     }
 `
 

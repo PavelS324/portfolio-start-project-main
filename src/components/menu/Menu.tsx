@@ -32,16 +32,19 @@ const StyleLi = styled.li`
     font-size: 20px;
     line-height: 26px;
 
+    transition: ${theme.animations.transition};
+
     &:hover {
         transform: scale(1.2);
-        transition: 500ms;
     }
 `
 
 const StyleLink = styled.a`
     color: ${theme.colors.font};
+
+    transition: ${theme.animations.transition};
+
     &:hover {
-        transition: 1500ms;
         color: #f5c9c9;
     }
 `

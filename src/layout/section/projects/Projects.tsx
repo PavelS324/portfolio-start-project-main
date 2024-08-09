@@ -131,9 +131,10 @@ const ProjectDescribeTeck = styled.h3`
 `
 
 const StyleProjektLinks = styled.div`
+    transition: ${theme.animations.transition};
+
     &:hover {
         transform: scale(1.1);
-        transition: 500ms;
     }
 `
 
