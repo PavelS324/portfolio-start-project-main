@@ -13,11 +13,11 @@ export const MobileMenu = () => {
 
             <MobileMenuPopup isOpen={menuIsOpen} onClick={ ()=>{setmenuIsOpen(false)} }>
                 <ul>
-                    <StyleLi><StyleLink href="">Home</StyleLink></StyleLi>
-                    <StyleLi><StyleLink href="">About</StyleLink></StyleLi>
-                    <StyleLi><StyleLink href="">Tech Stack</StyleLink></StyleLi>
-                    <StyleLi><StyleLink href="">Projects</StyleLink></StyleLi>
-                    <StyleLi><StyleLink href="">Contact</StyleLink></StyleLi>
+                    <StyleLi><StyleLink href="#home">Home</StyleLink></StyleLi>
+                    <StyleLi><StyleLink href="#about">About</StyleLink></StyleLi>
+                    <StyleLi><StyleLink href="#skills">Tech Stack</StyleLink></StyleLi>
+                    <StyleLi><StyleLink href="#projects">Projects</StyleLink></StyleLi>
+                    <StyleLi><StyleLink href="#contacts">Contact</StyleLink></StyleLi>
                 </ul>
             </MobileMenuPopup>
         </StyledMobileMenu>
@@ -39,7 +39,13 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     width: 100px;
     height: 100px;
     right: 15px;
+    z-index: 999;
+    transition: ${theme.animations.transition};
 
+    &:hover {
+        transform: scale(1.5);
+    }
+    
     span {
         display: block;
         width: 36px;
@@ -92,23 +98,30 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 99999;
+    z-index: 99;
     background-color: rgba(31, 31, 32, 0.9);
-    display: none;
-
-    ${props => props.isOpen && css<{isOpen: boolean}> `
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    `}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: ${theme.animations.transition};
 
     ul {
         display: flex;
-        gap: 30px;
+        gap: 10px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        transition: ${theme.animations.transition};
     }
+
+    ${props => props.isOpen && css<{isOpen: boolean}> `
+        transform: translateY(0);
+
+        & ul {
+            gap: 50px;
+        }
+    `}
 `
 
 const StyleLi = styled.li`
@@ -116,17 +129,18 @@ const StyleLi = styled.li`
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
+    transition: ${theme.animations.transition};
 
     &:hover {
         transform: scale(1.2);
-        transition: 500ms;
     }
 `
 
 const StyleLink = styled.a`
     color: ${theme.colors.font};
+    transition: ${theme.animations.transition};
+
     &:hover {
-        transition: 1500ms;
         color: #f5c9c9;
     }
 `
