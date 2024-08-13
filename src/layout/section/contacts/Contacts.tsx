@@ -4,8 +4,32 @@ import { Icon } from "../../../components/icon/Icon";
 import { theme } from "../../../styles/Theme";
 import { Container } from "../../../components/Container";
 import { SectionName } from "../../../components/SectionsText";
+import emailjs from '@emailjs/browser';
+import { ElementRef, useRef } from "react";
 
 export const Contacts = () => {
+
+    const form = useRef<ElementRef<'form'>>(null);
+
+    const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if(!form.current) return
+
+    emailjs
+        .sendForm('service_80om2zl', 'template_e6k84p5', form.current, {
+        publicKey: 'tOosuq29DOR4cXhiF',
+        })
+        .then(
+        () => {
+            console.log('SUCCESS!');
+        },
+        (error) => {
+            console.log('FAILED...', error.text);
+        },
+        );
+        e.target.reset();
+    };
     return (
         <StyledContacts id={"contacts"}>
             <Container>
@@ -13,10 +37,11 @@ export const Contacts = () => {
                     <SectionName>Contacts</SectionName>
 
                     <ContactsCenter>
-                        <StyledForm>
-                            <StyledInput placeholder="Your name" />
-                            <StyledInput placeholder="Your email address" />
-                            <StyledInput placeholder="Your message" as={"textarea"}/>
+                        <StyledForm ref={form} onSubmit={sendEmail}>
+                            <StyledInput required placeholder="Name" name="user_name"/>
+                            <StyledInput required placeholder="Email" name="email"/>
+                            <StyledInput required placeholder="Subject" name="subject"/>
+                            <StyledInput required placeholder="Message" name="message" as={"textarea"}/>
                             <StyledButton type={"submit"}>Send message</StyledButton>
                         </StyledForm>
 
